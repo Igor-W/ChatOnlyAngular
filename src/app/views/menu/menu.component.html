@@ -1,0 +1,38 @@
+<section class="left_part">
+  <div class="avatar">
+    <img src="{{authorizedUser.avatarPath}}" alt="" class="avatar_img">
+    <p class="avatar_name">
+      {{authorizedUser.name}}
+    </p>
+  </div>
+  <div class="menu">
+    <div class="menu_item">
+      <div class="menu_item_indicator"></div>
+      <fa-icon class="menu_item_icon" [icon] = faUserTie></fa-icon>
+      <p class="menu_item_name">
+        about me
+      </p>
+    </div>
+    <div class="menu_item">
+      <div class="menu_item_indicator"></div>
+      <fa-icon class="menu_item_icon" [icon]="faCommentAlt"></fa-icon>
+      <p class="menu_item_name">
+        chat
+      </p>
+    </div>
+    <div class="menu_item">
+      <div class="menu_item_indicator"></div>
+      <fa-icon class="menu_item_icon" [icon]="faUsers"></fa-icon>
+      <p class="menu_item_name">
+        my teams
+      </p>
+    </div>
+    <div class="menu_item">
+      <div class="menu_item_indicator"></div>
+      <fa-icon class="menu_item_icon" [icon]="faSignOutAlt"></fa-icon>
+      <p class="menu_item_name">
+        Sign out
+      </p>
+    </div>
+  </div>
+</section>
