@@ -4,15 +4,19 @@
   </p>
   <input type="text" class="search" placeholder="Search">
   <div class="contacts">
-    <div class="contact_card" *ngFor="let user of users" (click)="clickedContact()">
+    <div class="contact_card"
+         *ngFor="let user of users"
+         (click)="clickedContact(user)"
+         [class.active]="user === selectedUser"
+    >
       <p class="contact_card_date">01 Oct</p>
       <div class="contact_card_content">
-        <img src="{{user.avatarPath}}" alt="avatar" class="contact_card_avatar">
+        <img src="{{user.avatarPath}}" alt="avatar" class="contact_card_avatar" [class.active]="user === selectedUser">
         <div class="contact_card_text">
-          <p class="contact_card_name">{{user.name}}</p>
-          <p class="contact_card_old_msg">This is old message</p>
+          <p class="contact_card_name" [class.active]="user === selectedUser">{{user.name}}</p>
+          <p class="contact_card_old_msg" [class.active]="user === selectedUser">This is old message</p>
         </div>
-        <div class="contact_card_indicator">
+        <div class="contact_card_indicator" [class.active]="user === selectedUser">
           <p class="contact_card_indicator_text">2</p>
         </div>
       </div>
