@@ -1,26 +1,28 @@
 import {Injectable} from '@angular/core';
 import {TestData} from '../TestData/TestData';
 import {User} from '../Model/User';
-import {BehaviorSubject} from 'rxjs';
+import {BehaviorSubject, Subject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataHandlerService {
   usersSubject = new BehaviorSubject<User[]>(TestData.users);
+  authorizedUser: User;
 
-  getUsers(): User[] {
-    return TestData.users.filter(user => !user.isAuthorized);
+  constructor() {
+    this.fillUsers();
+  }
+
+  fillUsers() {
+    this.usersSubject.next(TestData.users.filter(user => !user.isAuthorized));
+    // return TestData.users.filter(user => !user.isAuthorized);
   }
 
   getAuthorizedUser(): User {
-    return TestData.users.filter(user => user.isAuthorized)[0];
+    this.authorizedUser = TestData.users.filter(user => user.isAuthorized)[0];
+    return this.authorizedUser;
   }
 
-  // fillMainContact(user: User) {
-  //   const users = TestData.users.filter(user => )
-  // }
 
-  constructor() {
-  }
 }

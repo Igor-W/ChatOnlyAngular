@@ -1,10 +1,10 @@
 <section class="right_part">
   <div class="contact_card_main">
     <div class="contact_card_content_main">
-      <img src="assets/images/user_avatars/ava_5.jpg" alt="" class="contact_card_avatar_main">
+      <img src="{{mainUser != null ? mainUser.avatarPath : 'assets/images/anonim1.png'}}" alt="" class="contact_card_avatar_main">
       <div class="contact_card_text_main">
-        <p class="contact_card_name_main">Stefania Burtea</p>
-        <p class="contact_card_old_msg_main">Position: <span>Junior Developer</span></p>
+        <p class="contact_card_name_main">{{mainUser != null ? mainUser.name : 'No name'}}</p>
+        <p class="contact_card_old_msg_main">Position: <span>{{mainUser != null ? mainUser.position : 'No position'}}</span></p>
       </div>
     </div>
   </div>

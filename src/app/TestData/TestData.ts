@@ -57,7 +57,7 @@ export class TestData {
     },
     {
       id: 5,
-      userName: 'SCG345',
+      userName: 'SQQ345',
       surname: 'Ionescu',
       gender: 'Female',
       telephoneNumber: '+4076890000',
@@ -66,6 +66,45 @@ export class TestData {
       name: 'Alina',
       isAdmin: false,
       avatarPath: 'assets/images/user_avatars/ava_5.jpg',
+      isAuthorized: false
+    },
+    {
+      id: 6,
+      userName: 'SCA345',
+      surname: 'Popescu',
+      gender: 'Female',
+      telephoneNumber: '+4076247800',
+      email: 'aliona@gmail.com',
+      position: 'Programmer',
+      name: 'Aliona',
+      isAdmin: false,
+      avatarPath: 'assets/images/user_avatars/ava_5.jpg',
+      isAuthorized: false
+    },
+    {
+      id: 7,
+      userName: 'SCF845',
+      surname: 'Monitorescu',
+      gender: 'Female',
+      telephoneNumber: '+4055590000',
+      email: 'marina@gmail.com',
+      position: 'Programmer',
+      name: 'Marina',
+      isAdmin: false,
+      avatarPath: 'assets/images/user_avatars/ava_5.jpg',
+      isAuthorized: false
+    },
+    {
+      id: 8,
+      userName: 'FGR456',
+      surname: 'Starc',
+      gender: 'Mele',
+      telephoneNumber: '+457686822111',
+      email: 'rob@gmail.com',
+      position: 'HR',
+      name: 'Rob',
+      isAdmin: false,
+      avatarPath: 'assets/images/user_avatars/ava_3.jpg',
       isAuthorized: false
     },
   ];
